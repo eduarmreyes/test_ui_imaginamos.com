@@ -11,12 +11,17 @@
 		var aNews = this; // This is to define our global variable
 		aNews.content = [];
 		aNews.message_list = [];
-		NewsFactory.getAllNews()
-			.success(function(aData) {
-				aNews.content = aData;
-			}).
-			error(function(aData) {
-				aNews.message_list.push(aData);
-			});
+		$scope.getNews = function() {
+			NewsFactory.setApiReference($scope.sAPI);
+			aNews.content = [];
+			NewsFactory.getAllNews()
+				.success(function(aData) {
+					aNews.content = aData;
+				}).
+				error(function(aData) {
+					aNews.message_list.push(aData);
+				});
+		};
+		$scope.getNews();
 	}]);
 })();

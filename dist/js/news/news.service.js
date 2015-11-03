@@ -7,9 +7,17 @@
 	var NewsService = angular.module('news.service', []);
 
 	NewsService.factory('NewsFactory', ['$http', function($http){
+		var sAPIReference = "";
 		return {
 			getAllNews: function() {
-				return $http.get("http://colorsalontuestilo.com/news_mock.json");
+				if (sAPIReference === "" || typeof sAPIReference === "undefined") {
+					sAPIReference = "news_mock.json";
+				}
+				return $http.get(sAPIReference);
+			},
+			setApiReference: function(sApi) {
+				debugger;
+				sAPIReference = sApi;
 			}
 		};
 	}])

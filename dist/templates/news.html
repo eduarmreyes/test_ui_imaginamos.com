@@ -10,6 +10,30 @@
 
 <!-- Main content -->
 <section class="content" ng-controller="NewsController as News">
+  <div class="box box-primary collapsed-box">
+    <div class="box-header with-border">
+      <h3 class="box-title">Configure News Resource</h3>
+      <div class="box-tools pull-right">
+        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
+        </button>
+      </div>
+    </div>
+    <!-- /.box-header -->
+    <!-- form start -->
+    <form role="form">
+      <div class="box-body">
+        <div class="form-group">
+          <label for="sAPI">API URL</label>
+          <input type="text" class="form-control" id="sAPI" placeholder="Enter API Reference like URL or file name" ng-model="sAPI">
+        </div>
+      </div>
+      <!-- /.box-body -->
+
+      <div class="box-footer">
+        <button ng-click="getNews()" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
   <!-- application -->
   <div class="row">
     <div class="col-md-12">
