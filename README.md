@@ -30,5 +30,9 @@ This is an open source project that is licensed under [MIT](http://opensource.or
 Technology used
 ---------
 - AdminLTE [v2.3](https://github.com/almasaeed2010/AdminLTE)
+- AngularJS (http://angularjs.org)
+- ui.bootstrap (https://angular-ui.github.io/bootstrap/#/collapse)
+- JSON API
 - jQuery
 - HTML5
+- CSS 3
